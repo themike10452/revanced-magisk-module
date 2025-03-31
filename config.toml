@@ -1,4 +1,5 @@
-enable-magisk-update = true   # set this to false if you do not want to receive updates for the module in magisk app
+enable-magisk-update = true # set this to false if you do not want to receive updates for the module in magisk app
+parallel-jobs = 1
 
 # add 'enabled = false' for not patching a specific app or remove it from the config
 # see https://github.com/j-hc/revanced-magisk-module/blob/main/CONFIG.md for more detailed explanations
@@ -6,14 +7,18 @@ enable-magisk-update = true   # set this to false if you do not want to receive 
 # you can use rvmm-config-gen to generate a config
 
 [YouTube]
-build-mode = "module"
-archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
+build-mode = "both"
+excluded-patches = ""
 included-patches = "'Disable resuming Shorts on startup' 'Disable auto captions' 'Disable player popup panels' 'Downloads' 'Hide ads' 'Hide album cards' 'Hide autoplay button' 'Hide breaking news shelf' 'Hide endscreen cards' 'Disable suggested video end screen' 'Hide info cards' 'Hide video action buttons' 'Remove tracking query parameter' 'Remove background playback restrictions' 'Restore old video quality menu' 'Change start page' 'Open links externally' 'Remember video quality' 'Seekbar tapping' 'SponsorBlock' 'Swipe controls' 'Video ads'"
-exclusive-patches = true
 version = "auto"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
+uptodown-dlurl = "https://youtube.en.uptodown.com/android"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 
 [Music]
-build-mode = "module"
-archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
-arch = "arm64-v8a"
+build-mode = "both"
+arch = "both"
 excluded-patches = "'GmsCore support'"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
+uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
+# archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
